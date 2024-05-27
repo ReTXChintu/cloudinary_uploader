@@ -19,7 +19,7 @@ npm install cloudinary-uploader
 ### Node Js Backend
 
 ```bash
-const { configureCloudinary, uploadFileToCloudinary } = require('cloudinary-uploader');
+const { configureCloudinary, uploadFileToCloudinary } = require('@an_average_coder/cloudinary_uploader');
 
 // Configure Cloudinary
 configureCloudinary({
@@ -52,7 +52,7 @@ app.listen(3000, () => {
 
 ```bash
 import React, { useState } from 'react';
-import { configureCloudinary, uploadFileToCloudinaryFrontend } from 'cloudinary-uploader';
+import { configureCloudinary, uploadFileToCloudinaryFrontend } from '@an_average_coder/cloudinary_uploader';
 
 // Configure Cloudinary
 configureCloudinary({
