@@ -1,10 +1,21 @@
 {
   "name": "@an_average_coder/cloudinary_uploader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A middleware to help you upload files to cloudinary",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "babel src -d dist/cjs",
+    "build:esm": "babel src -d dist/esm",
+    "release": "standard-version",
+    "postbuild": "copyfiles -u 1 src/**/*.d.ts dist/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +26,11 @@
   "dependencies": {
     "axios": "^1.7.2",
     "cloudinary": "^2.2.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "standard-version": "^9.5.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }

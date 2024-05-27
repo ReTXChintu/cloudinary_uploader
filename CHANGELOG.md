@@ -1,8 +1,18 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [Unreleased]
+### 1.0.1 (2024-05-27)
+
+## [1.1.0] - 2024-05-26
+
+### Changed
+
+- Added support for both CommonJS and ES Modules.
+
+### Fixed
+
+- Fixed module export issues for compatibility with ES Modules.
 
 ## [1.0.0] - 2024-05-25
 
